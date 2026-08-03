@@ -1,7 +1,12 @@
-export default function App(){
+import styles from "./app.module.css";
+import { Header } from "./components/Header";
+
+export default function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className={styles.container}>
+      <main>
+        <Header />
+      </main>
     </div>
-  )
+  );
 }
