@@ -27,6 +27,14 @@ export default function App() {
     setLetter("");
   }
 
+  useEffect(() => {
+    startGame();
+  }, []);
+
+  if (!challenge) {
+    return;
+  }
+
   return (
     <div className={styles.container}>
       <main>
@@ -34,11 +42,9 @@ export default function App() {
         <Tip tip="Uma das linguagens de programacao mais utilizadas" />
 
         <div className={styles.word}>
-          <Letter value="R" />
-          <Letter value="E" />
-          <Letter value="A" />
-          <Letter value="C" />
-          <Letter value="T" />
+          {challenge.word.split("").map(() => (
+            <Letter value="" />
+          ))}
         </div>
 
         <h4>Palpite</h4>
