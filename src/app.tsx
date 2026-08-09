@@ -45,6 +45,8 @@ export default function App() {
     if (exists) {
       alert("Voce ja utilizou a letra" + value);
     }
+
+    setLettersUsed((prevState) => [...prevState, { value, correct: false }]);
   }
 
   useEffect(() => {
