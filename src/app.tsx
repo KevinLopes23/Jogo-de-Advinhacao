@@ -47,6 +47,8 @@ export default function App() {
     }
 
     setLettersUsed((prevState) => [...prevState, { value, correct: false }]);
+
+    setLetter("");
   }
 
   useEffect(() => {
@@ -75,6 +77,7 @@ export default function App() {
             autoFocus
             maxLength={1}
             placeholder="?"
+            value={letter}
             onChange={(e) => setLetter(e.target.value)}
           />
           <Button title="Confirmar" onClick={handleConfirm} />
