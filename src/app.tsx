@@ -64,9 +64,31 @@ export default function App() {
     setLetter("");
   }
 
+  function endGame(message: string) {
+    alert(message);
+    startGame();
+  }
+
   useEffect(() => {
     startGame();
   }, []);
+
+  useEffect(() => {
+    if (!challenge) {
+      return;
+    }
+
+    setTimeout(() => {
+      if (score === challenge.word.length) {
+        return endGame("Parabens voce descobriu a palavra");
+      }
+
+      const attemptLimit = challenge.word.length + ATTEMPTS_MARGIN;
+      if (letterUsed.length === attemptLimit) {
+        return endGame("Que pena voce usou todas as tentativas");
+      }
+    }, 200);
+  }, [score, letterUsed.length]);
 
   if (!challenge) {
     return;
