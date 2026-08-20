@@ -41,26 +41,31 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ### Pré-requisitos
 
 Antes de começar, você precisará ter a seguinte ferramenta instalada em sua máquina:
+
 - [Node.js](https://nodejs.org/en/) (Versão 18 ou superior recomendada)
 
 ### Instalação
 
 1. Clone este repositório:
+
    ```bash
    git clone https://github.com/KevinLopes23/Jogo-de-Advinhacao.git
    ```
 
 2. Acesse o diretório do projeto:
+
    ```bash
    cd Jogo-de-Advinhacao
    ```
 
 3. Instale as dependências usando NPM, Yarn, PNPM ou Bun. Exemplo com NPM:
+
    ```bash
    npm install
    ```
 
 4. Execute a aplicação em modo de desenvolvimento:
+
    ```bash
    npm run dev
    ```
