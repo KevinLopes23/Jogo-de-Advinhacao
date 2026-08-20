@@ -1,6 +1,11 @@
 <div align="center">
   <h1>🎮 Jogo de Adivinhação</h1>
   <p>Um divertido jogo de palavras construído com React, TypeScript e Vite.</p>
+  <p>
+    <a href="https://kevinlopes23.github.io/Jogo-de-Advinhacao/" target="_blank">
+      <img src="https://img.shields.io/badge/🕹️_Jogue_Agora-Demonstração_Online-brightgreen?style=for-the-badge" alt="Jogar Agora" />
+    </a>
+  </p>
 </div>
 
 <br/>
@@ -55,7 +60,7 @@ Antes de começar, você precisará ter a seguinte ferramenta instalada em sua m
 2. Acesse o diretório do projeto:
 
    ```bash
-   cd Jogo-de-Advinhacao
+   cd Adivinho
    ```
 
 3. Instale as dependências usando NPM, Yarn, PNPM ou Bun. Exemplo com NPM:
