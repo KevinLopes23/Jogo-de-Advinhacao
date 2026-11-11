@@ -1,107 +1,77 @@
 <div align="center">
-  <h1>🎮 Jogo de Adivinhação</h1>
-  <p>Um divertido jogo de palavras construído com React, TypeScript e Vite.</p>
+  <h1>Adivinhe — Jogo de Adivinhação</h1>
+  <p><strong>Jogo de palavras no estilo forca: leia a dica e descubra a palavra, letra por letra.</strong></p>
   <p>
-    <a href="https://kevinlopes23.github.io/Jogo-de-Advinhacao/" target="_blank">
-      <img src="https://img.shields.io/badge/🕹️_Jogue_Agora-Demonstração_Online-brightgreen?style=for-the-badge" alt="Jogar Agora" />
-    </a>
+    <img alt="React" src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black">
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
+    <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white">
+    <img alt="CSS Modules" src="https://img.shields.io/badge/CSS_Modules-000000?logo=cssmodules&logoColor=white">
+    <a href="LICENSE"><img alt="Licença MIT" src="https://img.shields.io/badge/licença-MIT-blue"></a>
+    <br>
+    <a href="https://kevinlopes23.github.io/Jogo-de-Advinhacao/"><img alt="Jogar online" src="https://img.shields.io/badge/Jogar_online-GitHub_Pages-5F55D6?style=for-the-badge&logo=github&logoColor=white"></a>
   </p>
 </div>
 
-<br/>
+<p align="center">
+  <img src="docs/preview.webp" alt="Tela do jogo Adivinhe no desktop" width="74%">
+  <img src="docs/preview-mobile.webp" alt="Tela do jogo Adivinhe no celular" width="22%">
+</p>
 
-<div align="center">
-  <img src="./foto%201.png" alt="Demonstração do Jogo 1" width="45%" />
-  &nbsp;&nbsp;
-  <img src="./foto%202.png" alt="Demonstração do Jogo 2" width="45%" />
-</div>
+## 💡 Sobre
 
-<br/>
-
-## 📖 Sobre o Projeto
-
-O **Jogo de Adivinhação** é um jogo interativo (estilo "Forca") onde o jogador recebe uma dica e precisa adivinhar a palavra correta, letra por letra. O jogo possui uma margem de tentativas baseada no tamanho da palavra e oferece feedback imediato sobre as letras acertadas e as tentativas esgotadas.
-
-Desenvolvido focado em simplicidade e performance utilizando o ecossistema moderno do React.
+O **Adivinhe** sorteia uma palavra e mostra uma dica sobre ela. O jogador chuta uma letra por vez: os acertos vão aparecendo na palavra e todas as letras usadas ficam marcadas em verde (acerto) ou amarelo (erro). O limite de tentativas é o tamanho da palavra + 5. Projeto de estudo para praticar componentes, props e estado com React e TypeScript.
 
 ## ✨ Funcionalidades
 
-- 💡 **Dicas Dinâmicas:** Cada palavra desafio acompanha uma dica para auxiliar o jogador.
-- 🔠 **Validação de Entradas:** O sistema impede que letras duplicadas sejam contabilizadas e notifica o usuário.
-- 🎯 **Condição de Vitória/Derrota:** Limite de tentativas dinâmico (tamanho da palavra + 5 tentativas extras).
-- 🔄 **Reinício Rápido:** Opção de reiniciar o jogo a qualquer momento ou automaticamente após o final de uma partida.
-- 🎨 **Interface Componentizada:** Estrutura bem definida com componentes reutilizáveis para `Header`, `Input`, `Tip`, `Letter` e botões.
+- Palavra e dica sorteadas a cada partida (tema: tecnologias web)
+- Contador de tentativas com limite dinâmico (tamanho da palavra + 5)
+- Lista de letras utilizadas, coloridas por acerto/erro
+- Aviso ao repetir uma letra
+- Mensagem de vitória ou derrota e nova partida automática
+- Botão de reiniciar com confirmação
+- Componentes reutilizáveis: `Header`, `Tip`, `Letter`, `LetterUsed`, `Input` e `Button`
+- Deploy automático no GitHub Pages via GitHub Actions
 
-## 🚀 Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- CSS Modules
 
-- **[React 19](https://react.dev/)** - Biblioteca JavaScript para construção de interfaces de usuário.
-- **[TypeScript](https://www.typescriptlang.org/)** - Superset do JavaScript que adiciona tipagem estática.
-- **[Vite](https://vitejs.dev/)** - Ferramenta de build super rápida para projetos web modernos.
-- **CSS Modules** - Para o escopo local e estilização dos componentes.
+## 🚀 Como rodar
 
-## 🛠️ Como Executar o Projeto
+Requer Node.js 20 ou superior.
 
-### Pré-requisitos
+```bash
+git clone https://github.com/KevinLopes23/Jogo-de-Advinhacao.git
+cd Jogo-de-Advinhacao
+npm install
+npm run dev        # http://localhost:5173/Jogo-de-Advinhacao/
+```
 
-Antes de começar, você precisará ter a seguinte ferramenta instalada em sua máquina:
+```bash
+npm run build      # checa os tipos e gera dist/
+npm run preview    # serve o build localmente
+```
 
-- [Node.js](https://nodejs.org/en/) (Versão 18 ou superior recomendada)
+Para adicionar palavras, edite o array `WORDS` em `src/utils/words.ts` (cada item tem `word` e `tip`).
 
-### Instalação
-
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/KevinLopes23/Jogo-de-Advinhacao.git
-   ```
-
-2. Acesse o diretório do projeto:
-
-   ```bash
-   cd Adivinho
-   ```
-
-3. Instale as dependências usando NPM, Yarn, PNPM ou Bun. Exemplo com NPM:
-
-   ```bash
-   npm install
-   ```
-
-4. Execute a aplicação em modo de desenvolvimento:
-
-   ```bash
-   npm run dev
-   ```
-
-5. O servidor iniciará localmente. Acesse no navegador:
-   ```text
-   http://localhost:5173
-   ```
-
-## 📂 Estrutura de Pastas Principais
+## 📁 Estrutura
 
 ```
 src/
-├── assets/         # Imagens, fontes e outros recursos estáticos
-├── components/     # Componentes reutilizáveis da interface (Header, Input, Tip, etc)
-├── utils/          # Lógicas utilitárias e lista de palavras (words.ts)
-├── App.tsx         # Componente principal que gerencia o estado do jogo
-├── main.tsx        # Ponto de entrada da aplicação React
-└── global.css      # Estilos globais
+├── components/   Header, Tip, Letter, LetterUsed, Input, Button
+├── utils/        words.ts (lista de palavras e dicas)
+├── assets/       logo e ícones
+├── App.tsx       estado e regras do jogo
+└── main.tsx      ponto de entrada
 ```
-
-## 🤝 Contribuindo
-
-Este projeto é de código aberto e contribuições são muito bem-vindas! Se você quiser contribuir:
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Faça o commit de suas alterações seguindo o padrão Conventional Commits (`git commit -m 'feat: adicionando nova funcionalidade'`)
-4. Faça o push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Sinta-se livre para usá-lo, estudá-lo e modificá-lo.
+Distribuído sob a licença [MIT](LICENSE).
+
+## 👤 Autor
+
+Feito por [Kevin Lopes](https://github.com/KevinLopes23).
